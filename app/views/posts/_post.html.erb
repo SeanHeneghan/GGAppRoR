@@ -1,0 +1,12 @@
+<div class="info">
+  <h4><%= post.user.name %></h4>
+  <span class="action"><%= post.user.email %> has created a post!</span>
+</div>
+<div class="content">
+  <span class="text"><%= post.content %></span>
+  <% if post.attachment.present? %>
+    <div class="attachment">
+      <%= image_tag post.attachment.url %>
+    </div>
+  <% end %>
+</div>
